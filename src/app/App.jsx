@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProductList from './components/ProductList';
+import './App.css'; // Stil dosyanı buradan bağla
 
 function App() {
   const [showProductList, setShowProductList] = useState(false);
