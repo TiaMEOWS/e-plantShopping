@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
 import ProductList from './components/ProductList';
-import CartItem from './components/CartItem';
 
 function App() {
-  const [showCart, setShowCart] = useState(false);
+  const [showProductList, setShowProductList] = useState(false);
+
+  const handleGetStarted = () => {
+    setShowProductList(true);
+  };
 
   return (
-    <div>
-      <nav className="navbar">
-        <h1>Paradise Nursery</h1>
-        <button onClick={() => setShowCart(false)}>Bitkiler</button>
-        <button onClick={() => setShowCart(true)}>Sepet</button>
-      </nav>
-      {showCart ? <CartItem /> : <ProductList />}
+    <div className="landing-page">
+      {!showProductList ? (
+        <div className="landing-content">
+          <h1>Welcome to Paradise Nursery</h1>
+          <p>Where Green Meets Serenity</p>
+          <button className="get-started-btn" onClick={handleGetStarted}>
+            Get Started
+          </button>
+        </div>
+      ) : (
+        <ProductList />
+      )}
     </div>
   );
 }
+
 export default App;
