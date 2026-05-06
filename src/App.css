@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  background-image: url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+  padding: 1rem;
+}
